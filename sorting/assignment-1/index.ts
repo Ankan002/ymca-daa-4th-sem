@@ -11,6 +11,6 @@ bubbleSort(arrayOne);
 const endTimeOne = Date.now();
 
 console.log("Bubble Sort:")
-console.log(`Time required: ${endTimeOne - startTimeOne}`);
+console.log(`Time required: ${(endTimeOne - startTimeOne) / 1000} s`);
 console.log(arrayOne);
 
