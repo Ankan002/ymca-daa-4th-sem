@@ -1,0 +1,10 @@
+{
+  "name": "ymca-daa-4th-sem",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ankan Bhattacharya",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.14.0"
+  }
+}

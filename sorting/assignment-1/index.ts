@@ -14,3 +14,5 @@ console.log("Bubble Sort:")
 console.log(`Time required: ${(endTimeOne - startTimeOne) / 1000} s`);
 console.log(arrayOne);
 
+const arrayTwo = JSON.parse(JSON.stringify(arrayOne));
+
