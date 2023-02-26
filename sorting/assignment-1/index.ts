@@ -2,8 +2,8 @@ import { bubbleSort } from "./bubble-sort";
 import { selectionSort } from "./selection-sort";
 import { mergeSort } from "./merge-sort";
 import { quickSort } from "./quick-sort";
-import clc from "cli-color";
 import { randomizedQuickSort } from "./randomized-quick-sort";
+import clc from "cli-color";
 
 const arrayOne: Array<number> = [];
 
