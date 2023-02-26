@@ -1,5 +1,6 @@
 import { bubbleSort } from "./bubble-sort";
 import { selectionSort } from "./selection-sort";
+import { mergeSort } from "./merge-sort";
 import clc from "cli-color";
 
 const arrayOne: Array<number> = [];
@@ -9,6 +10,7 @@ for(let i=0; i<100000; i++){
 }
 
 const arrayTwo = JSON.parse(JSON.stringify(arrayOne));
+const arrayThree = JSON.parse(JSON.stringify(arrayOne));
 
 console.log(clc.yellowBright("Actual Array:"))
 console.log(arrayOne)
@@ -28,4 +30,12 @@ const endTimeTwo = Date.now();
 console.log(clc.redBright("Selection Sort:"))
 console.log(clc.greenBright(`Time required: ${(endTimeTwo - startTimeTwo) / 1000} s`));
 console.log(arrayTwo);
+
+const startTimeThree = Date.now();
+mergeSort(arrayThree)
+const endTimeThree = Date.now();
+
+console.log(clc.redBright("Merge Sort:"))
+console.log(clc.greenBright(`Time required: ${(endTimeThree - startTimeThree) / 1000} s`));
+console.log(arrayThree);
 
