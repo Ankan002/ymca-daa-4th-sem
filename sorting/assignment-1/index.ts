@@ -15,6 +15,7 @@ const arrayTwo = JSON.parse(JSON.stringify(arrayOne));
 const arrayThree = JSON.parse(JSON.stringify(arrayOne));
 const arrayFour = JSON.parse(JSON.stringify(arrayOne));
 const arrayFive = JSON.parse(JSON.stringify(arrayOne));
+const arraySix = JSON.parse(JSON.stringify(arrayOne));
 
 console.log(clc.yellowBright("Actual Array:"))
 console.log(arrayOne)
@@ -36,25 +37,33 @@ console.log(clc.greenBright(`Time required: ${(endTimeTwo - startTimeTwo) / 1000
 console.log(arrayTwo);
 
 const startTimeThree = Date.now();
-mergeSort(arrayThree)
+selectionSort(arrayThree);
 const endTimeThree = Date.now();
 
-console.log(clc.redBright("Merge Sort:"))
+console.log(clc.redBright("Insertion Sort:"))
 console.log(clc.greenBright(`Time required: ${(endTimeThree - startTimeThree) / 1000} s`));
 console.log(arrayThree);
 
 const startTimeFour = Date.now();
-quickSort(arrayFour)
+mergeSort(arrayFour)
 const endTimeFour = Date.now();
 
-console.log(clc.redBright("Quick Sort:"))
+console.log(clc.redBright("Merge Sort:"))
 console.log(clc.greenBright(`Time required: ${(endTimeFour - startTimeFour) / 1000} s`));
 console.log(arrayFour);
 
 const startTimeFive = Date.now();
-randomizedQuickSort(arrayFive);
+quickSort(arrayFive)
 const endTimeFive = Date.now();
 
-console.log(clc.redBright("Randomized Quick Sort:"))
+console.log(clc.redBright("Quick Sort:"))
 console.log(clc.greenBright(`Time required: ${(endTimeFive - startTimeFive) / 1000} s`));
 console.log(arrayFive);
+
+const startTimeSix = Date.now();
+randomizedQuickSort(arraySix);
+const endTimeSix = Date.now();
+
+console.log(clc.redBright("Randomized Quick Sort:"))
+console.log(clc.greenBright(`Time required: ${(endTimeSix - startTimeSix) / 1000} s`));
+console.log(arraySix);
