@@ -3,6 +3,8 @@ import { selectionSort } from "./selection-sort";
 import { mergeSort } from "./merge-sort";
 import { quickSort } from "./quick-sort";
 import { randomizedQuickSort } from "./randomized-quick-sort";
+import { heapSort } from "./heap-sort";
+import { insertionSort } from "./insertion-sort";
 import clc from "cli-color";
 
 const arrayOne: Array<number> = [];
@@ -16,6 +18,7 @@ const arrayThree = JSON.parse(JSON.stringify(arrayOne));
 const arrayFour = JSON.parse(JSON.stringify(arrayOne));
 const arrayFive = JSON.parse(JSON.stringify(arrayOne));
 const arraySix = JSON.parse(JSON.stringify(arrayOne));
+const arraySeven = JSON.parse(JSON.stringify(arrayOne));
 
 console.log(clc.yellowBright("Actual Array:"))
 console.log(arrayOne)
@@ -37,7 +40,7 @@ console.log(clc.greenBright(`Time required: ${(endTimeTwo - startTimeTwo) / 1000
 console.log(arrayTwo);
 
 const startTimeThree = Date.now();
-selectionSort(arrayThree);
+insertionSort(arrayThree);
 const endTimeThree = Date.now();
 
 console.log(clc.redBright("Insertion Sort:"))
@@ -67,3 +70,11 @@ const endTimeSix = Date.now();
 console.log(clc.redBright("Randomized Quick Sort:"))
 console.log(clc.greenBright(`Time required: ${(endTimeSix - startTimeSix) / 1000} s`));
 console.log(arraySix);
+
+const startTimeSeven = Date.now();
+heapSort(arraySeven);
+const endTimeSeven = Date.now();
+
+console.log(clc.redBright("Heap Sort:"))
+console.log(clc.greenBright(`Time required: ${(endTimeSeven - startTimeSeven) / 1000} s`));
+console.log(arraySeven);
