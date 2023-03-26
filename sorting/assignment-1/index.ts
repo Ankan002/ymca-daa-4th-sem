@@ -5,6 +5,7 @@ import { quickSort } from "./quick-sort";
 import { randomizedQuickSort } from "./randomized-quick-sort";
 import { heapSort } from "./heap-sort";
 import { insertionSort } from "./insertion-sort";
+import { countingSort } from "./counting-sort";
 import clc from "cli-color";
 
 const arrayOne: Array<number> = [];
@@ -13,12 +14,13 @@ for(let i=0; i<100000; i++){
     arrayOne.push(Math.floor(Math.random() * 10000) + 10);
 }
 
-const arrayTwo = JSON.parse(JSON.stringify(arrayOne));
-const arrayThree = JSON.parse(JSON.stringify(arrayOne));
-const arrayFour = JSON.parse(JSON.stringify(arrayOne));
-const arrayFive = JSON.parse(JSON.stringify(arrayOne));
-const arraySix = JSON.parse(JSON.stringify(arrayOne));
-const arraySeven = JSON.parse(JSON.stringify(arrayOne));
+const arrayTwo: Array<number> = JSON.parse(JSON.stringify(arrayOne));
+const arrayThree: Array<number> = JSON.parse(JSON.stringify(arrayOne));
+const arrayFour: Array<number> = JSON.parse(JSON.stringify(arrayOne));
+const arrayFive: Array<number> = JSON.parse(JSON.stringify(arrayOne));
+const arraySix: Array<number> = JSON.parse(JSON.stringify(arrayOne));
+const arraySeven: Array<number> = JSON.parse(JSON.stringify(arrayOne));
+const arrayEight: Array<number> = JSON.parse(JSON.stringify(arrayOne));
 
 console.log(clc.yellowBright("Actual Array:"))
 console.log(arrayOne)
@@ -77,4 +79,12 @@ const endTimeSeven = Date.now();
 
 console.log(clc.redBright("Heap Sort:"))
 console.log(clc.greenBright(`Time required: ${(endTimeSeven - startTimeSeven) / 1000} s`));
+console.log(arraySeven);
+
+const startTimeEight = Date.now();
+countingSort(arrayEight);
+const endTimeEight = Date.now();
+
+console.log(clc.redBright("Counting Sort:"))
+console.log(clc.greenBright(`Time required: ${(endTimeEight - startTimeEight) / 1000} s`));
 console.log(arraySeven);
